@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         }
     }
     
-    private let calculator = CalculatorLogic()
+    private var calculator = CalculatorLogic()
     
     @IBAction func calcButtonPressed(_ sender: UIButton) {
         
@@ -36,9 +36,9 @@ class ViewController: UIViewController {
         
         if let calcMethod = sender.currentTitle {
             
-            guard let result = calculator.calculate(symbol: calcMethod) else { fatalError("Result of the calculations is nil.") }
-                
-            displayValue = result
+            if let result = calculator.calculate(symbol: calcMethod) {
+                displayValue = result
+            }
             
         }
     
