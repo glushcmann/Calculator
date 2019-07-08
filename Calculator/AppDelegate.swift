@@ -2,7 +2,9 @@
 //  AppDelegate.swift
 //  Calculator
 //
-
+//  Created by Никита on 07/07/2019.
+//  
+//
 
 import UIKit
 
